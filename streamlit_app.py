@@ -18,7 +18,7 @@ from streamlit_chat import message
 
 
 
-def get_pdf_text() -> Optional[str]:
+def get_pdf_text():
     """
     Function to load PDF text and split it into chunks.
     """
