@@ -2,6 +2,7 @@ import os
 import pickle
 import random
 import streamlit as st
+import torch
 
 from langchain import PromptTemplate
 from langchain.chains import RetrievalQA
