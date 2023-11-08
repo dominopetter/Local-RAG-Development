@@ -1,6 +1,7 @@
 # LocalRAG
 
-![chatbot](chatbot_img.png)
+<img src="chatbot_img.png"  width="600" height="300">
+
 
 ## Environment Setup
 
