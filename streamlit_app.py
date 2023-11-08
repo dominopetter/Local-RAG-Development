@@ -9,11 +9,32 @@ from langchain.chains import RetrievalQA
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.vectorstores.qdrant import Qdrant
+from langchain.document_loaders import PyPDFLoader, PyPDFDirectoryLoader
 from qdrant_client import QdrantClient
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline
 
 from streamlit.web.server import websocket_headers
 from streamlit_chat import message
+
+
+
+def get_pdf_text() -> Optional[str]:
+    """
+    Function to load PDF text and split it into chunks.
+    """
+    st.header("Document Upload")
+    uploaded_file = st.file_uploader(
+        label="Here, upload your PDF file ",
+        type="pdf"
+    )
+    if uploaded_file:
+        pdf_reader = PdfReader(uploaded_file)
+        text = "\n\n".join([page.extract_text() for page in pdf_reader.pages])
+        text_splitter = TokenTextSplitter(chunk_size=100, chunk_overlap=0)
+        return text_splitter.split_text(text)
+    else:
+        return None
+
 
 
 os.environ['SENTENCE_TRANSFORMERS_HOME'] = '/mnt/data/smuckers_poc/model_cache/'
@@ -60,22 +81,18 @@ embedding_model_name = "BAAI/bge-small-en"
 model_kwargs = {'device': 'cpu'}
 encode_kwargs = {'normalize_embeddings': True}
 
-embeddings = HuggingFaceBgeEmbeddings(model_name="BAAI/bge-small-en",
+embeddings = HuggingFaceBgeEmbeddings(model_name=embedding_model_name,
                                       model_kwargs=model_kwargs,
                                       encode_kwargs=encode_kwargs
                                      )
 
-client = QdrantClient(path="/mnt/artifacts/local_qdrant/") 
+pdf_texts = get_pdf_text()
 
-doc_store = Qdrant(client=client,
-                   collection_name=f"{embedding_model_name}_press_release",
-                   embeddings=embeddings,
-                  )
-
-# doc_store = Qdrant.from_texts(texts=None,
-#                               embedding=embeddings,
-#                               path="/mnt/artifacts/local_qdrant/",
-#                               collection=f"{embedding_model_name}_press_release")
+if pdf_texts:
+    doc_store = Qdrant.from_texts(texts=texts,
+                                  embedding=embeddings,
+                                  path="/mnt/artifacts/local_qdrant/",
+                                  collection=f"{embedding_model_name}_press_release")
 
 if doc_store:
     chain_type_kwargs = {"prompt": PROMPT}
