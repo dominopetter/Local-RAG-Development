@@ -92,8 +92,9 @@ pdf_texts = get_pdf_text()
 if pdf_texts:
     doc_store = Qdrant.from_texts(texts=pdf_texts,
                                   embedding=embeddings,
-                                  location=":memory:"
-                                  collection=f"{embedding_model_name}_press_release")
+                                  location=":memory:",
+                                  collection=f"{embedding_model_name}_press_release"
+                                 )
 
 if doc_store:
     chain_type_kwargs = {"prompt": PROMPT}
