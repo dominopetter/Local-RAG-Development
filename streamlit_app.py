@@ -92,7 +92,7 @@ pdf_texts = get_pdf_text()
 if pdf_texts:
     doc_store = Qdrant.from_texts(texts=pdf_texts,
                                   embedding=embeddings,
-                                  path="/mnt/artifacts/local_qdrant/",
+                                  location=":memory:"
                                   collection=f"{embedding_model_name}_press_release")
 
 if doc_store:
