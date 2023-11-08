@@ -90,7 +90,7 @@ embeddings = HuggingFaceBgeEmbeddings(model_name=embedding_model_name,
 pdf_texts = get_pdf_text()
 
 if pdf_texts:
-    doc_store = Qdrant.from_texts(texts=texts,
+    doc_store = Qdrant.from_texts(texts=pdf_texts,
                                   embedding=embeddings,
                                   path="/mnt/artifacts/local_qdrant/",
                                   collection=f"{embedding_model_name}_press_release")
