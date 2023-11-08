@@ -64,10 +64,17 @@ embeddings = HuggingFaceBgeEmbeddings(model_name="BAAI/bge-small-en",
                                       encode_kwargs=encode_kwargs
                                      )
 
-doc_store = Qdrant.from_texts(texts=None,
-                              embedding=embeddings,
-                              path="/mnt/artifacts/local_qdrant/",
-                              collection=f"{embedding_model_name}_press_release")
+client = QdrantClient(path="/mnt/artifacts/local_qdrant/") 
+
+doc_store = Qdrant(client=client,
+                   collection_name=f"{embedding_model_name}_press_release",
+                   embeddings=embeddings,
+                  )
+
+# doc_store = Qdrant.from_texts(texts=None,
+#                               embedding=embeddings,
+#                               path="/mnt/artifacts/local_qdrant/",
+#                               collection=f"{embedding_model_name}_press_release")
 
 if doc_store:
     chain_type_kwargs = {"prompt": PROMPT}
