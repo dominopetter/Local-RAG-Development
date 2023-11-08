@@ -6,8 +6,10 @@ import streamlit as st
 from langchain import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain.embeddings import HuggingFaceBgeEmbeddings
+from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.vectorstores.qdrant import Qdrant
 from qdrant_client import QdrantClient
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline
 
 from streamlit.web.server import websocket_headers
 from streamlit_chat import message
