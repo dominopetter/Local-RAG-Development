@@ -1,5 +1,7 @@
 # LocalRAG
 
+[](chatbot_img.png)
+
 ## Environment Setup
 
 ### Custom base image 
