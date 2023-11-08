@@ -1,6 +1,6 @@
 # LocalRAG
 
-[](chatbot_img.png)
+![chatbot](chatbot_img.png)
 
 ## Environment Setup
 
