@@ -9,6 +9,7 @@ from langchain.chains import RetrievalQA
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.vectorstores.qdrant import Qdrant
+from langchain.text_splitter import TokenTextSplitter
 from PyPDF2 import PdfReader
 from qdrant_client import QdrantClient
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline
