@@ -64,7 +64,8 @@ embeddings = HuggingFaceBgeEmbeddings(model_name="BAAI/bge-small-en",
                                       encode_kwargs=encode_kwargs
                                      )
 
-doc_store = Qdrant.from_texts(embedding=embeddings,
+doc_store = Qdrant.from_texts(texts=None,
+                              embedding=embeddings,
                               path="/mnt/artifacts/local_qdrant/",
                               collection=f"{embedding_model_name}_press_release")
 
