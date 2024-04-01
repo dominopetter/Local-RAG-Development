@@ -3,7 +3,7 @@
 ## Overview
 Local RAG Development is an innovative project aimed at enhancing the capabilities of NLP applications by leveraging the Retriever-Augmented Generation (RAG) model. This project enables local development and testing of RAG models, facilitating easier experimentation and customization for specific NLP tasks.
 
-![RAG Model Usage](https://se-demo.domino.tech/u/petter/Local-RAG-Development/view-git/RAG.jpeg) <!-- Replace 'image-link-here' with the actual link to the image after uploading it to GitHub or another image hosting service -->
+![RAG Model Usage](https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Lenovo_Global_Corporate_Logo.png/2560px-Lenovo_Global_Corporate_Logo.png) <!-- Replace 'image-link-here' with the actual link to the image after uploading it to GitHub or another image hosting service -->
 
 ## Features
 - Local setup and testing environment for RAG models
