@@ -17,8 +17,6 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from streamlit.web.server import websocket_headers
 from streamlit_chat import message
 
-st.image("https://mma.prnewswire.com/media/1887629/domino_color_logo_Logo.jpg")
-
 def get_pdf_text():
     """
     Function to load PDF text and split it into chunks.
@@ -66,6 +64,7 @@ if 'messages' not in st.session_state:
 
 
 st.set_page_config(initial_sidebar_state='collapsed')
+st.image("https://mma.prnewswire.com/media/1887629/domino_color_logo_Logo.jpg")
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
 
 qa_chain = None
