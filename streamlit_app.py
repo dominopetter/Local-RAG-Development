@@ -17,7 +17,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from streamlit.web.server import websocket_headers
 from streamlit_chat import message
 
-
+st.image("https://mma.prnewswire.com/media/1887629/domino_color_logo_Logo.jpg")
 
 def get_pdf_text():
     """
