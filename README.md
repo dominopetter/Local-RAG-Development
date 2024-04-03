@@ -1,4 +1,4 @@
-![RAG Model Usage](https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Lenovo_Global_Corporate_Logo.png/2560px-Lenovo_Global_Corporate_Logo.png) <!-- Replace 'image-link-here' with the actual link to the image after uploading it to GitHub or another image hosting service -->
+![RAG Model Usage](https://www.nokia.com/sites/default/files/styles/scale_720_not_convert_webp/public/2023-02/nokia-refreshed-logo-1_1.jpg) <!-- Replace 'image-link-here' with the actual link to the image after uploading it to GitHub or another image hosting service -->
 # APPROVED TEMPLATE
 
 ## Local RAG Development - Overview
