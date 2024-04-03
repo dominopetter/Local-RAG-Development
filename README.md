@@ -1,4 +1,4 @@
-![RAG Model Usage](https://www.nokia.com/sites/default/files/styles/scale_720_not_convert_webp/public/2023-02/nokia-refreshed-logo-1_1.jpg) <!-- Replace 'image-link-here' with the actual link to the image after uploading it to GitHub or another image hosting service -->
+![RAG Model Usage](https://www.vanillaplus.com/wp-content/uploads/2023/02/Nokia-new-logo-transparent-background-1024x341.png) <!-- Replace 'image-link-here' with the actual link to the image after uploading it to GitHub or another image hosting service -->
 # APPROVED TEMPLATE
 
 ## Local RAG Development - Overview
