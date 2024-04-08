@@ -64,7 +64,7 @@ if 'messages' not in st.session_state:
 
 
 st.set_page_config(initial_sidebar_state='collapsed')
-st.image("https://www.vanillaplus.com/wp-content/uploads/2023/02/Nokia-new-logo-transparent-background-1024x341.png")
+st.image("https://miro.medium.com/v2/resize:fit:1024/1*Xja4K2GX7YKTU1AngpUTkQ.png")
 clear_button = st.sidebar.button("Clear Conversation", key="clear")
 
 qa_chain = None
