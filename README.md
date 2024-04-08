@@ -1,4 +1,4 @@
-![RAG Model Usage](https://www.vanillaplus.com/wp-content/uploads/2023/02/Nokia-new-logo-transparent-background-1024x341.png) <!-- Replace 'image-link-here' with the actual link to the image after uploading it to GitHub or another image hosting service -->
+![RAG Model Usage](https://assets-global.website-files.com/5ec4696a9b6d337d51632638/65bd3f7682e5e9d088f4c351_RAGModelCycle1-A.png) <!-- Replace 'image-link-here' with the actual link to the image after uploading it to GitHub or another image hosting service -->
 # APPROVED TEMPLATE
 
 ## Local RAG Development - Overview
