@@ -9,7 +9,7 @@ b = random.randint(1, 100)
 print(f"Running workflow with a={a} and b={b}")
 
 # Command to run the Flyte workflow
-command = f"pyflyte run --remote workflow.py complex_math_workflow --a {a} --b {b}"
+command = f"pyflyte run --remote workflow.py complex_deploy_workflow --a {a} --b {b}"
 
 # Execute the command
 result = subprocess.run(command, shell=True, check=True, capture_output=True, text=True)

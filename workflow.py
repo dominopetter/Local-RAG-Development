@@ -2,7 +2,7 @@ from flytekit import workflow
 from flytekitplugins.domino.task import DominoJobConfig, DominoJobTask
 
 @workflow
-def complex_math_workflow(a: int, b: int) -> (int, int, int, str, str, int):
+def complex_deploy_workflow(a: int, b: int) -> (int, int, int, str, str, int):
     # Create addition task
     add_task = DominoJobTask(
         name='Add new data',
